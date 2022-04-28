@@ -1,0 +1,84 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "ignorePatterns": [".eslintrc.js"],
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": "default",
+        "format": ["camelCase"],
+        "modifiers": ["unused"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE"]
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "UPPER_CASE", "PascalCase"],
+        "modifiers": ["exported"]
+      },
+      {
+        "selector": "variable",
+        "format": null,
+        "modifiers": ["destructured"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "classProperty",
+        "format": ["UPPER_CASE", "camelCase"]
+      },
+      {
+        "selector": ["objectLiteralProperty"],
+        "format": null
+      },
+      {
+        "selector": ["property", "method"],
+        "format": ["camelCase"],
+        "modifiers": ["private"],
+        "leadingUnderscore": "require"
+      }
+    ],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "no-console": "warn",
+    "newline-before-return": "error",
+    "curly": "error",
+    "spaced-comment": ["error", "always"]
+  }
+}

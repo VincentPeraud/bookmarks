@@ -1,0 +1,477 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-04-28T14:03:38.548Z",
+  "__export_source": "insomnia.desktop.app:v2022.2.1",
+  "resources": [
+    {
+      "_id": "req_e46a16a450dc4a3f92a558f8073615bd",
+      "parentId": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "modified": 1651154588357,
+      "created": 1651078178305,
+      "url": "{{ _.baseUrl }}/bookmarks/1/10",
+      "name": "List",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "{{ _.oauth.username }}",
+        "password": "{{ _.oauth.password }}"
+      },
+      "metaSortKey": -1651078178305,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "parentId": "wrk_0fc5f9e935554ace9135d0940dd703da",
+      "modified": 1651098330930,
+      "created": 1651098330930,
+      "name": "Bookmarks",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1651098330930,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_0fc5f9e935554ace9135d0940dd703da",
+      "parentId": null,
+      "modified": 1651154594770,
+      "created": 1651078148448,
+      "name": "Bookmarks",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_940129f1b12a47b6a32798a48a82a317",
+      "parentId": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "modified": 1651149255161,
+      "created": 1651089858021,
+      "url": "{{ _.baseUrl }}/bookmarks",
+      "name": "Create bookmark (flickr)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"url\": \"https://flickr.com/photos/feuilllu/45771361701/\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1ea05d027f5d4ffd98f1a83cc4db5ee6"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "{{ _.oauth.username }}",
+        "password": "{{ _.oauth.password }}"
+      },
+      "metaSortKey": -1651078178255,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1304fcf8d9e242a5a7d23cfde19c0f51",
+      "parentId": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "modified": 1651101944926,
+      "created": 1651098531582,
+      "url": "{{ _.baseUrl }}/bookmarks",
+      "name": "Create bookmark (vimeo)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"url\": \"https://vimeo.com/565486457\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1ea05d027f5d4ffd98f1a83cc4db5ee6"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "{{ _.oauth.username }}",
+        "password": "{{ _.oauth.password }}"
+      },
+      "metaSortKey": -1649776072946,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_92ff4ba86b13449a81c3d567c88d1b54",
+      "parentId": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "modified": 1651101948936,
+      "created": 1651101653503,
+      "url": "{{ _.baseUrl }}/bookmarks/{% response 'body', 'req_e46a16a450dc4a3f92a558f8073615bd', 'b64::JC5pdGVtc1swXS5pZA==::46b', 'always', 60 %}",
+      "name": "Get bookmark",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1ea05d027f5d4ffd98f1a83cc4db5ee6"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "{{ _.oauth.username }}",
+        "password": "{{ _.oauth.password }}"
+      },
+      "metaSortKey": -1649450546618.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_63633e27b4b14153b036ac23aa8e1a12",
+      "parentId": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "modified": 1651101950544,
+      "created": 1651098563964,
+      "url": "{{ _.baseUrl }}/bookmarks/{% response 'body', 'req_e46a16a450dc4a3f92a558f8073615bd', 'b64::JC5pdGVtc1swXS5pZA==::46b', 'always', 60 %}",
+      "name": "Edit bookmark (vimeo)",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"url\": \"https://vimeo.com/506026441\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1ea05d027f5d4ffd98f1a83cc4db5ee6"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "{{ _.oauth.username }}",
+        "password": "{{ _.oauth.password }}"
+      },
+      "metaSortKey": -1649125020291.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d1aeac94b1e143458424f0c53ed75ec4",
+      "parentId": "fld_b21aee1a06e74b2fb0ccb7a46bc7535b",
+      "modified": 1651101938651,
+      "created": 1651098656231,
+      "url": "{{ _.baseUrl }}/bookmarks/{% response 'body', 'req_e46a16a450dc4a3f92a558f8073615bd', 'b64::JC5pdGVtc1swXS5pZA==::46b', 'always', 60 %}",
+      "name": "Remove bookmark",
+      "description": "",
+      "method": "DELETE",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1ea05d027f5d4ffd98f1a83cc4db5ee6"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "{{ _.oauth.username }}",
+        "password": "{{ _.oauth.password }}"
+      },
+      "metaSortKey": -1648799493964.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_606c7c373400486eba391b0598120e05",
+      "parentId": "fld_b4bc82ccea9d41e8846c17911c5e2949",
+      "modified": 1651098699027,
+      "created": 1651083234400,
+      "url": "http://www.flickr.com/services/oembed/?format=json&url=http%3A//www.flickr.com/photos/bees/2341623661/",
+      "name": "Flickr",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1651083234400,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b4bc82ccea9d41e8846c17911c5e2949",
+      "parentId": "wrk_0fc5f9e935554ace9135d0940dd703da",
+      "modified": 1651098717513,
+      "created": 1651098695551,
+      "name": "Oembed",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1651098330880,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3e774609e9a944afbfa06fc582c44b6a",
+      "parentId": "fld_b4bc82ccea9d41e8846c17911c5e2949",
+      "modified": 1651098702779,
+      "created": 1651082987047,
+      "url": "https://vimeo.com/api/oembed.json?url=https://vimeo.com/565486457",
+      "name": "Vimeo",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1651083234350,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_bbde829b01d52fd1aabbe4e86db060d79026aa0a",
+      "parentId": "wrk_0fc5f9e935554ace9135d0940dd703da",
+      "modified": 1651078248518,
+      "created": 1651078148452,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:3000",
+        "oauth": { "username": "admin", "password": "supersecret" }
+      },
+      "dataPropertyOrder": { "&": ["baseUrl", "oauth"], "&~|oauth": ["username", "password"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1651078148452,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_bbde829b01d52fd1aabbe4e86db060d79026aa0a",
+      "parentId": "wrk_0fc5f9e935554ace9135d0940dd703da",
+      "modified": 1651083236527,
+      "created": 1651078148453,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "xb",
+          "value": "823887",
+          "expires": "2032-04-24T18:13:56.000Z",
+          "maxAge": 315360000,
+          "domain": "flickr.com",
+          "path": "/",
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.522Z",
+          "lastAccessed": "2022-04-27T18:13:56.522Z",
+          "id": "4613651031960131"
+        },
+        {
+          "key": "localization",
+          "value": "en-us%3Bxx%3B",
+          "expires": "2024-04-24T18:13:56.000Z",
+          "maxAge": 62899200,
+          "domain": "flickr.com",
+          "path": "/",
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "34921724144843225"
+        },
+        {
+          "key": "flrbp",
+          "value": "1651083236-511b02a6a89f6564a4507087c66577452fa9aabc",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "930362314608649"
+        },
+        {
+          "key": "flrbgrp",
+          "value": "1651083236-ff750fca0fdd9c90e9f113f1e86a56a4a342ba46",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "92078356302653"
+        },
+        {
+          "key": "flrbgdrp",
+          "value": "1651083236-92e116f7057e277f671aa5cb7e541c803d984263",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "6401795924003615"
+        },
+        {
+          "key": "flrbgmrp",
+          "value": "1651083236-f2504f96884058a6bd19e1782b7f7316860581da",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "7854717379927858"
+        },
+        {
+          "key": "flrbrst",
+          "value": "1651083236-5db66d504c3102e1c55ca79bbd566558ac48a969",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "8752279928751681"
+        },
+        {
+          "key": "flrtags",
+          "value": "1651083236-071e3791d7f0e8e631211317b59b1deb0adf9801",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.523Z",
+          "lastAccessed": "2022-04-27T18:13:56.523Z",
+          "id": "31394427701330807"
+        },
+        {
+          "key": "flrbrp",
+          "value": "1651083236-16a3bcfd79edb527b57c78d3bc010ea9f03e5ced",
+          "expires": "2022-10-24T18:13:56.000Z",
+          "maxAge": 15552000,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.524Z",
+          "lastAccessed": "2022-04-27T18:13:56.524Z",
+          "id": "4951270588511125"
+        },
+        {
+          "key": "flrb",
+          "value": "51",
+          "expires": "2022-04-27T19:13:56.000Z",
+          "maxAge": 3600,
+          "domain": "flickr.com",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.524Z",
+          "lastAccessed": "2022-04-27T18:13:56.524Z",
+          "id": "5071990114117808"
+        },
+        {
+          "key": "ccc",
+          "value": "%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D",
+          "expires": "2022-05-27T18:13:56.000Z",
+          "maxAge": 2592000,
+          "domain": "flickr.com",
+          "path": "/",
+          "hostOnly": false,
+          "creation": "2022-04-27T18:13:56.524Z",
+          "lastAccessed": "2022-04-27T18:13:56.524Z",
+          "id": "3936771880236616"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_a94479c4288b4a4eaa83666a4e20f3e9",
+      "parentId": "wrk_0fc5f9e935554ace9135d0940dd703da",
+      "modified": 1651078148449,
+      "created": 1651078148449,
+      "fileName": "Klaxoon Test Technique",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
